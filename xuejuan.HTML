@@ -329,13 +329,33 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-1);
+            border-radius: 0 2px 2px 0;
         }
 
         .skill-category h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
+            color: var(--primary-color);
         }
 
         .skill-category h3::after {
@@ -350,51 +370,117 @@
         }
 
         .skill-item {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
         }
 
         .skill-item span {
-            display: block;
-            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
             font-weight: 500;
+        }
+        
+        .skill-item span::after {
+            content: attr(data-level);
+            color: var(--accent-color);
+            font-weight: 600;
         }
 
         .progress-bar {
-            height: 8px;
+            height: 10px;
             background: #f1f2f6;
-            border-radius: 4px;
+            border-radius: 5px;
             overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .progress {
             height: 100%;
             background: var(--gradient-1);
-            border-radius: 4px;
+            border-radius: 5px;
+            position: relative;
+            transition: width 1.5s ease-in-out;
         }
-
-        /* 关于我 */
+        
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+        
+        /* 关于我部分 */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 3rem;
             align-items: center;
-        }
-
-        .about-img {
+            background: var(--card-bg);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
 
+        .about-img {
+            height: 100%;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            position: relative;
+        }
+        
+        .about-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(108, 92, 231, 0.2), transparent);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            padding: 2rem;
+        }
+
         .about-text p {
             margin-bottom: 1.5rem;
-            color: var(--light-text);
+            color: var(--text-color);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .about-text p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 3px;
+            height: calc(100% - 1rem);
+            background: var(--gradient-2);
+            border-radius: 3px;
         }
 
         .about-text .btn {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
-
+        
         /* 联系方式 */
         .contact-container {
             display: grid;
@@ -562,9 +648,9 @@
             
             <ul class="nav-links">
                 <li class="active"><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
-                <li><a href="#projects"><i class="fas fa-project-diagram"></i> 作业项目</a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i> 技能展示</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> 关于我</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> 技能展示</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> 作业项目</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> 联系方式</a></li>
             </ul>
             
@@ -582,7 +668,22 @@
                 <div class="hero">
                     <h1>欢迎来到我的<span>作业展示</span>网站</h1>
                     <p>这里展示了我在学习过程中完成的各类作业</p>
-                    <a href="#projects" class="btn">查看我的作业</a>
+                    <a href="#about" class="btn">了解更多</a>
+                </div>
+            </section>
+            
+            <!-- 关于我部分 -->
+            <section id="about" class="section">
+                <h2 class="section-title">关于我</h2>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="微信图片_20250331171054.jpg" alt="关于我">
+                    </div>
+                    <div class="about-text">
+                        <p>你好,我是一名在校学生,目前就读于西北民族大学新闻学。我对网页设计和编程充满热情，喜欢将创意转化为实际的项目作品。</p>
+                        <p>在学习过程中，我积极参与各类课程项目和实践活动，不断提升自己的专业技能和团队协作能力。这个网站展示了我在学习过程中完成的一些作业和项目，希望能够分享我的学习成果。</p>
+                        <p>我的目标通过本学期的学习，能够在未来就业的过程中有一份帮助，并帮助自己掌握更多的技能。</p>
+                    </div>
                 </div>
             </section>
             
