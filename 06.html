@@ -34,10 +34,83 @@
         let myElectricCar = new ElectricCar("特斯拉","Model S","2025","300")
         myElectricCar.start()
         myElectricCar.charge()
+
+        //回调函数练习
+        console.log('这是我的简历')
+
+        setTimeout(function(){
+            console.log('这是我的技能')
+        },1000)
+
+            console.log('这是我的经历')
+       
         
+        
+        
+        //数组操作示例
+        console.log('数组操作示例：')
+        
+        // 创建数组
+        let fruits = ['苹果', '香蕉', '橙子', '草莓', '芒果']
+        console.log('原始数组:', fruits)
+        
+        // 访问数组元素
+        console.log('第一个水果:', fruits[0])
+        console.log('最后一个水果:', fruits[fruits.length - 1])
+        
+        // 数组方法
+        // 添加元素
+        fruits.push('葡萄')
+        console.log('添加后的数组:', fruits)
+        
+        // 删除最后一个元素
+        let removed = fruits.pop()
+        console.log('删除的元素:', removed)
+        console.log('删除后的数组:', fruits)
+        
+        // 在开头添加元素
+        fruits.unshift('西瓜')
+        console.log('在开头添加后:', fruits)
+        
+        // 删除第一个元素
+        fruits.shift()
+        console.log('删除第一个后:', fruits)
+        
+        // 查找元素索引
+        let index = fruits.indexOf('橙子')
+        console.log('橙子的索引:', index)
+        
+        // 数组切片
+        let citrus = fruits.slice(1, 3)
+        console.log('切片结果:', citrus)
+        
+        // 数组遍历
+        console.log('使用forEach遍历:')
+        fruits.forEach(function(item, index) {
+            console.log(index, ':', item)
+        })
+        
+        // 数组映射
+        let fruitLengths = fruits.map(function(fruit) {
+            return fruit + '的长度是' + fruit.length + '个字符'
+        })
+        console.log('映射结果:', fruitLengths)
+        
+        // 数组过滤
+        let longFruits = fruits.filter(function(fruit) {
+            return fruit.length > 2
+        })
+        console.log('过滤结果(长度>2):', longFruits)
     </script>
 </head>
 <body>
-    
+    <h1 onclick="alert('我被点击了')">JavaScrit 语法</h1>
+    <did id = "demo">div content</did>
 </body>
+<script>
+    myDom = document.getElementById("demo")
+    console.log(myDom)
+    myDom.innerHTML = "这是我修改后的内容"
+
+</script>
 </html>
