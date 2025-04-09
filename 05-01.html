@@ -5,53 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第五周练习</title>
     <script>
-        let.a = 10
-        const title = "不不变的值"
+        let a = 10
+        const title = "不变的值"
         alert(title)
         let b = "10"
         console.log(a === b)
-        console.log(a== b)
+        console.log(a == b)
         console.log(a+b)
         console.log(a+Number(b))
         console.log(Number(a)+b)
         console.log(Number(a)+Number(b))
         let c = "10.00"
         console.log(a === c)
-        console.log(a== c)
-        console.log(a+b)
+        console.log(a == c)
+        console.log(a+c)
         console.log(a+Number(c))
         console.log(Number(a)+c)
         console.log(Number(a)+Number(c))
-        let  = 100
-        if(socre>=90) {
+        let score = 100
+        if(score >= 90) {
                console.log("优秀") 
         }
         else {
             console.log("良好或者及格以及不及格")
         }
-        for(let i = 60;i<10;i++) {
+        for(let i = 0; i < 10; i++) {
             console.log(i)
         }
-        let score = 85
-        while(score > 85) {
+        let score2 = 95
+        while(score2 > 85) {
             console.log("优秀")
-            score = score -10
+            score2 = score2 - 10
         }
         function sayHello() {
             console.log("这是见面打招呼的方式")
         }
         sayHello()
-        function sayHello2(你好) {
-            console.log("这是见面打招呼的方式"+你好)
+        function sayHello2(greeting) {
+            console.log("这是见面打招呼的方式：" + greeting)
         }
         sayHello2("你好")
-        function sayHello3(你好,再见) {
-            console.log("这是见面打招呼的方式"+你好+再见)
+        function sayHello3(greeting, farewell) {
+            console.log("这是见面打招呼的方式：" + greeting + "," + farewell)
         }
-        sayHello3("你好","再见")
-        function sayHello4(你好,再见,你好) {
-            console.log("这是见面打招呼的方式"+你好+再见+你好)
+        sayHello3("你好", "再见")
+        function sayHello4(greeting, farewell, repeat) {
+            console.log("这是见面打招呼的方式：" + greeting + "," + farewell + "," + repeat)
         }
+        sayHello4("你好", "再见", "你好")
     </script>
 </head>
 <body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScrit 学习联系</title>
+    <script>
+        //类和对象
+        class Car {
+            constructor(brand,model,year){
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+            start(){
+                console.log(`汽车${this.brand} ${this.model} ${this.year}启动了`)
+            }
+             stop(){
+                console.log(`汽车${this.brand} ${this.model} ${this.year}停止了`)
+            }
+        }
+        let myCar = new Car("小米","MU7","2025")
+        myCar.start()
+        myCar.stop()
+        class ElectricCar extends Car{
+            constructor(brand,model,year,range){
+                super(brand,model,year)
+                this.range = range
+            }
+            charge(){
+                console.log(`电动车${this.brand} ${this.model} ${this.year}正在充电`)
+            }
+        }
+        let myElectricCar = new ElectricCar("特斯拉","Model S","2025","300")
+        myElectricCar.start()
+        myElectricCar.charge()
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
