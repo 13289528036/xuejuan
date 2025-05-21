@@ -4,7 +4,7 @@ import Link from 'next/link';
 async function getCommits() {
   // 注意：对于未认证的请求，GitHub API 有速率限制。
   // 在实际生产应用中，您可能需要使用认证的请求或后端代理。
-  const res = await fetch('https://api.github.com/repos/13289528036/xuejuan/commits', { // 修改了这里的 URL
+  const res = await fetch('https://api.github.com/repos/yangjh-xbmu/Web-develop/commits?per_page=10', {
     // next: { revalidate: 3600 } // 可选：每小时重新验证数据
   });
   if (!res.ok) {
@@ -38,7 +38,7 @@ export default async function GitHubStatsPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">GitHub: 13289528036/xuejuan 提交记录</h1> {/* 修改了这里的仓库名称 */}
+      <h1 className="text-2xl font-bold mb-4">GitHub: yangjh-xbmu/Web-develop 提交记录</h1>
       <p className="mb-4">最近 {commits.length} 条提交：</p>
       {commits.length > 0 ? (
         <ul className="space-y-4">
