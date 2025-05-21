@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 
 
 // 页面主组件
@@ -38,7 +38,7 @@ export default function HomePage() {
       title: "Tailwind CSS实战",
       description: "学习使用Tailwind CSS快速构建现代化用户界面。",
       link: "#",
-      imageUrl: "https://images.unsplash.com/photo-1618027052039-0690a3707035?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+      imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
     },
     {
       id: 6,

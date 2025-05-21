@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四周CSS联系</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff8e1;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            background-color: rgba(246, 234, 195, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8B4513;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #8B4513;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #8B4513;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* 头部横幅 */
+        .bg-section {
+            padding: 50px 30px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            /* 背景颜色 */
+            background-color: #f7edb4;
+            /* 背景图片 */
+            background-image: url('33.jpg');
+            /* 背景重复 */
+            background-repeat: no-repeat;
+            /* 背景位置 */
+            background-position: center;
+            /* 背景大小 */
+            background-size: cover;
+            /* 背景附着 */
+            background-attachment: fixed;
+            
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bg-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+        
+        .bg-section h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            animation: slideInFromTop 1s ease;
+        }
+        
+        .bg-section p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.2rem;
+            max-width: 800px;
+            text-align: center;
+            animation: slideInFromBottom 1s ease 0.3s;
+            animation-fill-mode: both;
+        }
+        
+        /* 内容区域样式 */
+        h1, h2, h3 {
+            color: #8B4513;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 30px 0;
+            width: 100%;
+            animation: fadeIn 1s ease;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #8B4513;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        h2:hover::after {
+            width: 100%;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+            animation: fadeIn 1s ease;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        /* 盒子样式 */
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        
+        .box {
+            width: calc(50% - 10px);
+            min-height: 200px;
+            border: 2px dashed #f0d78c;
+            padding: 20px;
+            margin-bottom: 2em;
+            border-radius: 20px;
+            background-color: #fffaf0;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .box:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #e6c35c;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .box:hover::before {
+            left: 100%;
+        }
+        
+        /* Flex 容器样式 */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .flex-container p {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f9f3e0;
+            border: 1px solid #e6c35c;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .flex-container p:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background-color: #f5e9c0;
+        }
+        
+        /* 列表样式 */
+        ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            transition: transform 0.3s;
+        }
+        
+        li::before {
+            content: '•';
+            color: #8B4513;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        li:hover {
+            transform: translateX(10px);
+        }
+        
+        /* 动画盒子样式 */
+        .animation-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .animate-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .animate-box {
+            width: 150px;
+            height: 150px;
+            background-color: #f7edb4;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #8B4513;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        
+        .animate-box:hover {
+            border-radius: 50%;
+            color: white;
+            background-color: #e6c35c;
+            transform: rotate(360deg) scale(1.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .pulse-box {
+            animation: pulse 2s infinite;
+        }
+        
+        .float-box {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .shake-box:hover {
+            animation: shake 0.5s ease-in-out;
+        }
+        
+        /* 关键帧动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInFromTop {
+            from { 
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInFromBottom {
+            from { 
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%;
+            }
+            
+            .flex-container {
+                flex-direction: column;
+            }
+            
+            .animate-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">中医养生</div>
+            <ul class="nav-links">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">历史</a></li>
+                <li><a href="#">理论</a></li>
+                <li><a href="#">应用</a></li>
+                <li><a href="#">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- 头部横幅 -->
+        <div class="bg-section">
+            <h1>中医养生智慧</h1>
+            <p>传承千年的东方医学精华，平衡阴阳，调和气血</p>
+        </div>
+
+        <h1>中医简介</h1>
+        <p>中医学以 阴阳五行 作为理论基础，将人体看成是气、形、神的统一体，通过" 望闻问切 "四诊合参的方法，探求病因、病性、病位，分析病机及人体内 五脏六腑 、经络关节、 气血津液 的变化，判断邪正消长，进而得出病名，归纳出证型，以辨证论治原则，制定"汗、吐、下、和、温、清、补、消"等治法，使用 中药 、 针灸 、 推拿 、 按摩 、 拔罐 、 气功 、 食疗 等多种治疗手段，使人体达到阴阳调和而康复。</p>
+        
+        <section>
+            <h2>中医的历史渊源</h2>
+            <div>
+                <p>
+                    中医,也称汉医,2018年10月1日,中医纳入其具有全球影响力的医学纲要中医诞生于原始社会，如日本医学、韩国医学、朝鲜医学、越南医学等等都是以中医为基础发展起来的。中医承载着中国古代人民同疾病作斗争的经验和理论知识中医学以阴阳五行作为理论基础，将人体看成是气、形、神的统一体，通过"望闻问切"四诊合参的方法，探求病因、病性、病位，分析病机及人体内五脏六腑、经络关节、气血津液的变化，判断邪正消长，进而得出病名，归纳出证型，以辨证论治原则，制定"汗、吐、下、和、温、清、补、消"等治法，使用中药、针灸、推拿、按摩、拔罐、气功、食疗等多种治疗手段，使人体达到阴阳调和而康复。
+                </p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>中医的发展及其应用</h2>
+            <div class="box-container">
+                <div class="box">中医药学的蓬勃发展和它与现代医学的汇聚和互补已经成为迅速发展的时代潮流，这一潮流不仅成为医学科学发展的强大推动力量，而且也已成为临床实践中提高医疗保健水平、降低医疗费用和社会成本的有效手段。</div>
+                <div class="box">当代科学技术正出现从分析向综合回归的显著趋势。 通过多学科交叉，应用信息科学、系统科学、复杂科学等新理论和新方法来认识生命奥秘和疾病现象已成热点，从而为认识中医学的整体观念、辨证论治、因人施治、复方用药等优势和特色提供了机遇和条件。</div>
+            </div>
+            
+            <h2>中医的成就</h2>
+            <ul>
+                <li>中医药学的蓬勃发展和它与现代医学的汇聚和互补已经成为迅速发展的时代潮</li>
+                <li>中医的发展及其应用</li>
+                <li>中医的成就</li>
+            </ul>
+            
+            <h2>中医历史发展</h2>
+            <div class="flex-container">
+                <p>中国的中医学起源于三皇五帝时期，相传伏羲发明了针灸并尝试草药，神农炎帝更是尝尽百草，并且用茶来解毒</p>
+                <p>在周代(公元前1046年,公元前771年)中国就建立了世界上第一个医院和医疗制度，周代的医疗机构设有医师、上士、下士、府（管药库）、史（管记录）、徒若干人</p>
+                <p>齐国有长桑和他的徒弟扁鹊。扁鹊发明了中医独特的辨证论治,并总结为"四诊"方法,即"望、闻、问、切"。</p>
+            </div>
+        </section>
+        
+        <section class="animation-section">
+            <h2>动画效果展示</h2>
+            <p>中医理论认为，人体内的气血运行不息，阴阳平衡是健康的基础。以下动画展示了不同的能量流动形式。</p>
+            
+            <div class="animate-container">
+                <div class="animate-box">旋转效果</div>
+                <div class="animate-box pulse-box">脉动效果</div>
+                <div class="animate-box float-box">浮动效果</div>
+                <div class="animate-box shake-box">震动效果</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
