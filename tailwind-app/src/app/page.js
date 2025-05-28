@@ -42,10 +42,6 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       <Navbar />
-      {/* 新增的欢迎语 */}
-      <div className="bg-blue-500 text-white text-center p-4">
-        <p className="text-xl font-semibold">欢迎来到雪娟页面</p>
-      </div>
       <main className="flex-grow container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-slate-800 mb-2">
@@ -53,6 +49,12 @@ export default function Home() {
           </h1>
           <p className="text-lg text-slate-600">
             欢迎来到课程练习展示平台，这里汇集了各个阶段的学习成果。
+          </p>
+          {/* 新增的欢迎语 */}
+          <p className="mt-4 text-3xl font-extrabold ">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 animate-pulse">
+              欢迎来到雪娟页面
+            </span>
           </p>
         </header>
 

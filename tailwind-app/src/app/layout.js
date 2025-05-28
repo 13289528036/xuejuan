@@ -8,18 +8,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN"> {/* 推荐使用中文 lang */}
       <head>
-        {/* Next.js 会自动注入必要的 <head> 内容 */}
-        {/* 您也可以在这里添加自定义的 <meta> 或 <link> 标签 */}
+
       </head>
-      <body>
-        <div className="flex flex-col min-h-screen"> {/* 添加 flex 容器使 footer 保持在底部 */}
-          <main className="flex-grow"> {/* 主要内容区域 */}
-            {children}
-          </main>
-          <Footer /> {/* 在主要内容之后添加 Footer 组件 */}
-        </div>
+      <body
+        className={` antialiased bg-slate-50 flex flex-col min-h-screen`}
+      >
+        <div className="flex-grow">{children}</div>
+        <Footer /> {/* 添加 Footer 组件 */}
       </body>
     </html>
   );
