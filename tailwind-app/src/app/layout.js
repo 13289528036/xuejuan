@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="zh-CN"> {/* 推荐使用中文 lang */}
+    <html lang="lang"> {/* 推荐使用中文 lang */}
       <head>
 
       </head>
