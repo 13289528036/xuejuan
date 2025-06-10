@@ -1,7 +1,7 @@
 // src/app/github-stats/commits/[commitId]/page.js
 
 async function getCommitDetails(commitId) {
-  const res = await fetch(`https://github.com/13289528036/xuejuan/blob/main/page.js${commitId}`);
+  const res = await fetch(`https://github.com/cloudflare/templates/tree/v3.1.0/astro-blog-starter-template`);
   if (!res.ok) {
     throw new Error(`Failed to fetch commit details for ${commitId}`);
   }

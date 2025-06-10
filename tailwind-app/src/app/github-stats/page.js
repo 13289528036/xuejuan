@@ -2,10 +2,10 @@
 import Link from 'next/link';
 
 async function getCommits() {
-  // 注意：对于未认证的请求，GitHub API 有速率限制。
-  // 在实际生产应用中，您可能需要使用认证的请求或后端代理。
-  const res = await fetch('https://github.com/13289528036/xuejuan', {
-    // next: { revalidate: 3600 } // 可选：每小时重新验证数据
+  // 注意:对于未认证的请求,GitHub API 有速率限制。
+  // 在实际生产应用中,您可能需要使用认证的请求或后端代理。
+  const res = await fetch('https://raw.githubusercontent.com/13289528036/xuejuan/main/tailwind-app/src/data/exercises.json', {
+    next: { revalidate: 3600 } // 可选:每小时重新验证数据
   });
   if (!res.ok) {
     // 如果请求失败，抛出错误，会被 error.js 捕获

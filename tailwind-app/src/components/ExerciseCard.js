@@ -60,11 +60,10 @@ export default function ExerciseCard({
           <button
             onClick={handleToggleFavorite}
             className={`px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200
-                        ${
-                          isFavorited
-                            ? "bg-amber-500 text-white hover:bg-amber-600" // 已收藏样式
-                            : "bg-gray-200 text-gray-700 hover:bg-gray-300" // 未收藏样式
-                        }`}
+                        ${isFavorited
+                ? "bg-amber-500 text-white hover:bg-amber-600" // 已收藏样式
+                : "bg-gray-200 text-gray-700 hover:bg-gray-300" // 未收藏样式
+              }`}
           >
             {isFavorited ? "已收藏 ★" : "收藏 ☆"}
           </button>

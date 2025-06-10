@@ -40,21 +40,15 @@ import exercises from "@/data/exercises.json"; // 从 JSON 文件导入练习数
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="flex flex-col min-h-screen bg-slate-100"> {/* Slightly lighter background for better contrast */}
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-8">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-slate-800 mb-2">
-            《Web前端开发》课程练习
+        <header className="text-center mb-16 py-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl"> {/* Added gradient, padding, rounded corners and shadow */}
+          <h1 className="text-5xl font-extrabold text-white mb-4"> {/* Larger, bolder, white text */}
+            欢迎来到雪娟的页面
           </h1>
-          <p className="text-lg text-slate-600">
-            欢迎来到课程练习展示平台，这里汇集了各个阶段的学习成果。
-          </p>
-          {/* 新增的欢迎语 */}
-          <p className="mt-4 text-3xl font-extrabold ">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 animate-pulse">
-              欢迎来到雪娟页面
-            </span>
+          <p className="text-xl text-purple-100"> {/* Adjusted text color and size */}
+            在这里探索我的Web前端学习之旅和项目练习。
           </p>
         </header>
 

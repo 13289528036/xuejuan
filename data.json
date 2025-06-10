@@ -1,0 +1,219 @@
+{
+  "population_characteristics": [
+    {
+      "dimension": "年龄",
+      "category": "18-25岁用户",
+      "value": "73.5%",
+      "note": "主力人群"
+    },
+    {
+      "dimension": "年龄",
+      "category": "26-30岁用户",
+      "value": "26.5%",
+      "note": ""
+    },
+    {
+      "dimension": "性别",
+      "category": "女性",
+      "value": "55%-65%（全平台）",
+      "note": "爱情类偏好显著"
+    },
+    {
+      "dimension": "性别",
+      "category": "女性",
+      "value": "50.9%（大学生样本）",
+      "note": "爱情类偏好显著"
+    },
+    {
+      "dimension": "性别",
+      "category": "男性",
+      "value": "45%-35%（全平台）",
+      "note": "悬疑/动作类偏好"
+    },
+    {
+      "dimension": "性别",
+      "category": "男性",
+      "value": "49.1%（大学生样本）",
+      "note": "悬疑/动作类偏好"
+    },
+    {
+      "dimension": "地域",
+      "category": "新一线及二线城市",
+      "value": "53.3%",
+      "note": "主力区域"
+    },
+    {
+      "dimension": "地域",
+      "category": "三四线城市",
+      "value": ">30%",
+      "note": "低频长时观看"
+    },
+    {
+      "dimension": "专业",
+      "category": "人文社科类",
+      "value": "最爱：综艺/影视剪辑",
+      "note": "最排斥：喊麦社会摇 数据来源：2019年研究"
+    },
+    {
+      "dimension": "专业",
+      "category": "理学类",
+      "value": "最爱：综艺/影视剪辑",
+      "note": "最排斥：鬼畜、吃播"
+    },
+    {
+      "dimension": "专业",
+      "category": "工科类",
+      "value": "最爱：综艺/影视剪辑",
+      "note": "最排斥：草根恶搞、体育"
+    },
+    {
+      "dimension": "专业",
+      "category": "信息科学类",
+      "value": "最爱：综艺/影视剪辑",
+      "note": "最排斥：草根恶搞、吃播"
+    },
+    {
+      "dimension": "专业",
+      "category": "医学类",
+      "value": "最爱：搞笑段子",
+      "note": "最排斥：情景小短剧、鬼畜 唯一偏好差异显著的专业"
+    }
+  ],
+  "viewing_behavior": [
+    {
+      "type": "观看时长",
+      "indicator": "日均时长（整体）",
+      "detail": "1.72小时"
+    },
+    {
+      "type": "观看时长",
+      "indicator": "高频用户（>2小时/日）",
+      "detail": "36.26%"
+    },
+    {
+      "type": "观看时长",
+      "indicator": "大一新生日均时长",
+      "detail": "2.9小时"
+    },
+    {
+      "type": "观看时长",
+      "indicator": "周均时长",
+      "detail": "2.3小时"
+    },
+    {
+      "type": "观看时段",
+      "indicator": "早高峰（6-8点）",
+      "detail": "通勤时段"
+    },
+    {
+      "type": "观看时段",
+      "indicator": "午高峰（11-13点）",
+      "detail": "午休时段"
+    },
+    {
+      "type": "观看时段",
+      "indicator": "晚高峰（20-22点）",
+      "detail": "睡前时段（占比40%）"
+    },
+    {
+      "type": "观看时段",
+      "indicator": "周末/下班后",
+      "detail": "黄金时段（合计占比45.86%）"
+    },
+    {
+      "type": "观看场景",
+      "indicator": "睡前休息",
+      "detail": "全年龄段首选（一线城市51%）"
+    },
+    {
+      "type": "观看场景",
+      "indicator": "通勤/交通工具",
+      "detail": "一线城市主要场景"
+    },
+    {
+      "type": "观看场景",
+      "indicator": "午休/工作间隙",
+      "detail": "41.9%用户选择"
+    },
+    {
+      "type": "观看场景",
+      "indicator": "宅家休闲",
+      "detail": "三四线城市主要场景"
+    }
+  ],
+  "content_preference": [
+    {
+      "dimension": "总体题材",
+      "category": "大学生TOP3",
+      "preference": "轻松搞笑（58.6%）",
+      "note": "校园奇幻（18-24岁主力）、知识科普（28.5%）"
+    },
+    {
+      "dimension": "总体题材",
+      "category": "全平台TOP3",
+      "preference": "爱情（31%）",
+      "note": "剧情（19%）、古装（11%）"
+    },
+    {
+      "dimension": "性别偏好",
+      "category": "女性",
+      "preference": "爱情/甜宠/逆袭（爱情类占比65%）",
+      "note": ""
+    },
+    {
+      "dimension": "性别偏好",
+      "category": "男性",
+      "preference": "悬疑/动作/正能量（悬疑类占比60%）",
+      "note": ""
+    },
+    {
+      "dimension": "年龄偏好",
+      "category": "18-24岁",
+      "preference": "校园、奇幻、游戏动漫（TGI>150）",
+      "note": ""
+    },
+    {
+      "dimension": "年龄偏好",
+      "category": "高年级生",
+      "preference": "复杂叙事类",
+      "note": ""
+    }
+  ],
+  "impact_assessment": [
+    {
+      "type": "积极影响",
+      "expression": "心理减压：缓解学业压力",
+      "data_support": "70%用户通过校园题材获得情感代偿"
+    },
+    {
+      "type": "积极影响",
+      "expression": "知识获取：泛知识类内容满足学习需求",
+      "data_support": "93.3%用户观看科普类（其中61%为主要内容）"
+    },
+    {
+      "type": "积极影响",
+      "expression": "社交货币：增强同辈互动",
+      "data_support": "提供话题素材"
+    },
+    {
+      "type": "负面影响",
+      "expression": "注意力下降：与观看时长正相关",
+      "data_support": "回归分析R²=0.32"
+    },
+    {
+      "type": "负面影响",
+      "expression": "时间管理失衡：挤占学习时间",
+      "data_support": "24%用户承认（大一新生尤甚）"
+    },
+    {
+      "type": "负面作用",
+      "expression": "价值观冲击：受“逆袭”“霸总”叙事影响消费观",
+      "data_support": "23%用户过度追求虚拟成功"
+    },
+    {
+      "type": "负面作用",
+      "expression": "成瘾风险：影响作息",
+      "data_support": "5%-10%存在沉迷现象"
+    }
+  ]
+}
