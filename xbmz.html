@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固原发展概览</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav button {
+            color: #fff;
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover, nav button.active {
+            background-color: #e8491d;
+        }
+
+        /* 子导航样式 */
+        .sub-nav {
+            background: #f0f0f0;
+            padding: 8px 0;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .sub-nav button {
+            color: #333;
+            background: #ddd;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 0 5px;
+            border-radius: 3px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sub-nav button:hover, .sub-nav button.active {
+            background-color: #35424a;
+            color: #fff;
+        }
+
+        .sub-content {
+            display: none; /* 默认隐藏所有子板块 */
+        }
+
+        .sub-content.active {
+            display: block; /* 显示活动的子板块 */
+        }
+
+        .content-section {
+            display: none; /* 默认隐藏所有板块 */
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        .content-section.active {
+            display: block; /* 显示活动板块 */
+        }
+
+        .content-section h2 {
+            color: #35424a;
+            border-bottom: 2px solid #e8491d;
+            padding-bottom: 5px;
+        }
+
+        .data-highlight {
+            background-color: #e8f4fd;
+            border-left: 5px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .data-highlight p {
+            margin: 5px 0;
+        }
+
+        .data-highlight strong {
+            color: #1976D2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        /* 简单的图表占位符样式 */
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .chart-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>固原市发展成就展</h1>
+    </header>
+
+    <nav id="main-nav">
+        <button data-target="overview" class="active">发展概览</button>
+        <button data-target="economy">经济发展</button>
+        <button data-target="tourism">旅游文化</button>
+        <button data-target="social">社会民生</button>
+        <button data-target="future">未来展望</button>
+    </nav>
+
+    <div class="container">
+        <section id="overview" class="content-section active">
+            <h2>发展概览</h2>
+            <p>固原市，位于宁夏回族自治区南部，是历史悠久的文化名城。近年来，在国家政策的支持和全市人民的经济建设、社会发展、生态保护等方面取得了显著成就。</p>
+            <div class="data-highlight">
+                <p><strong>地区生产总值 (GDP):</strong> [此处填写最新GDP数据，例如：XXX亿元]</p>
+                <p><strong>常住人口:</strong> [此处填写最新人口数据，例如：XXX万人]</p>
+                <p><strong>城镇化率:</strong> [此处填写最新城镇化率，例如：XX%]</p>
+            </div>
+            <p>本页面将从多个维度展示固原的发展面貌和未来规划。</p>
+        </section>
+
+        <section id="economy" class="content-section">
+            <h2>经济发展</h2>
+            <nav class="sub-nav">
+                <button data-subtarget="economy-overview" class="active">总体情况</button>
+                <button data-subtarget="economy-agriculture">特色农业</button>
+                <button data-subtarget="economy-industry">新兴工业</button>
+                <button data-subtarget="economy-investment">招商引资</button>
+            </nav>
+
+            <div id="economy-overview" class="sub-content active">
+                <p>固原市积极调整产业结构，大力发展特色农业、新能源、新材料等新兴产业，经济持续保持健康发展态势。</p>
+                <div class="data-highlight">
+                    <p><strong>农业总产值:</strong> [例如：XXX亿元，同比增长X%]</p>
+                    <p><strong>工业增加值:</strong> [例如：XXX亿元，同比增长X%]</p>
+                    <p><strong>重点项目投资:</strong> [例如：完成投资XXX亿元]</p>
+                </div>
+                <p>未来，固原将继续MOSCOMBO，吸引更多投资，推动经济QUALITY_NAME.</p>
+                <div class="chart-container">
+                    <h3>经济增长趋势 (示例图表)</h3>
+                    <div class="chart-placeholder">
+                        图表区域 (例如：GDP年度增长柱状图)
+                        <canvas id="economyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="economy-agriculture" class="sub-content">
+                <h3>特色农业发展</h3>
+                <p>[此处填写关于固原特色农业的详细介绍、数据、成就等]</p>
+                <div class="data-highlight">
+                    <p><strong>马铃薯产量:</strong> [数据]</p>
+                    <p><strong>冷凉蔬菜种植面积:</strong> [数据]</p>
+                    <p><strong>肉牛养殖规模:</strong> [数据]</p>
+                </div>
+                <div class="chart-container">
+                    <h4>主要农产品产量占比 (示例饼图)</h4>
+                    <div class="chart-placeholder">
+                        图表区域 (饼图)
+                        <canvas id="agricultureChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="economy-industry" class="sub-content">
+                <h3>新兴工业崛起</h3>
+                <p>[此处填写关于固原新能源、新材料等新兴工业的详细介绍、数据、代表企业等]</p>
+                <div class="data-highlight">
+                    <p><strong>新能源装机容量:</strong> [数据]</p>
+                    <p><strong>高新技术企业数量:</strong> [数据]</p>
+                </div>
+                <div class="chart-container">
+                    <h4>工业产值构成 (示例图表)</h4>
+                    <div class="chart-placeholder">
+                        图表区域 (例如：不同类型工业产值对比)
+                        <canvas id="industryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="economy-investment" class="sub-content">
+                <h3>招商引资成果</h3>
+                <p>[此处填写关于固原招商引资政策、成果、重点引进项目等]</p>
+                <div class="data-highlight">
+                    <p><strong>实际利用外资:</strong> [数据]</p>
+                    <p><strong>新签约项目数量:</strong> [数据]</p>
+                </div>
+                 <div class="chart-container">
+                    <h4>年度引资额变化 (示例折线图)</h4>
+                    <div class="chart-placeholder">
+                        图表区域 (折线图)
+                        <canvas id="investmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="content-section">
+            <h2>旅游文化</h2>
+            <p>固原拥有丰富的旅游资源，如六盘山国家森林公园、须弥山石窟等。通过加强文化遗产保护和旅游基础设施建设，旅游产业已成为新的经济增长点。</p>
+            <div class="data-highlight">
+                <p><strong>年接待游客数量:</strong> [例如：XXX万人次]</p>
+                <p><strong>旅游总收入:</strong> [例如：XXX亿元]</p>
+                <p><strong>A级景区数量:</strong> [例如：XX家]</p>
+            </div>
+            <p>固原将继续打造精品旅游线路，提升服务质量，建设区域性旅游目的地。</p>
+        </section>
+
+        <section id="social" class="content-section">
+            <h2>社会民生</h2>
+            <p>固原市高度重视民生改善，在教育、医疗、社会保障等方面持续投入，人民生活水平不断提高。</p>
+            <div class="data-highlight">
+                <p><strong>城镇居民人均可支配收入:</strong> [例如：XXXXX元]</p>
+                <p><strong>农村居民人均可支配收入:</strong> [例如：XXXXX元]</p>
+                <p><strong>新增就业岗位:</strong> [例如：XXXX个]</p>
+                <p><strong>医疗机构数量:</strong> [例如：XX所]</p>
+            </div>
+            <p>未来进一步完善公共服务体系，提升人民群众的幸福感和获得感。</p>
+        </section>
+
+        <section id="future" class="content-section">
+            <h2>未来展望</h2>
+            <p>展望未来，固原市将坚持以习近平新时代中国特色社会主义思想为指导，抢抓发展机遇，深化改革开放，努力建设经济繁荣、民族团结、环境优美、人民富裕的美丽新固原。</p>
+            <p><strong>主要发展目标:</strong></p>
+            <ul>
+                <li>[目标1：例如，到20XX年，GDP达到XXXX亿元]</li>
+                <li>[目标2：例如，城乡居民收入持续增长]</li>
+                <li>[目标3：例如，生态环境质量持续改善]</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 固原市发展概览. (请替换为您的信息)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navButtons = document.querySelectorAll('#main-nav button');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // 主导航切换逻辑
+            navButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    contentSections.forEach(section => section.classList.remove('active'));
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                        // 当切换主板块时，确保其内部的第一个子板块（如果存在）被激活
+                        const firstSubNavButton = targetSection.querySelector('.sub-nav button');
+                        if (firstSubNavButton) {
+                            activateSubNav(firstSubNavButton, targetSection);
+                        }
+                    }
+                });
+            });
+
+            // 子导航切换逻辑封装成函数
+            function activateSubNav(buttonElement, parentSection) {
+                const subNavButtons = parentSection.querySelectorAll('.sub-nav button');
+                const subContentSections = parentSection.querySelectorAll('.sub-content');
+
+                subNavButtons.forEach(btn => btn.classList.remove('active'));
+                buttonElement.classList.add('active');
+
+                subContentSections.forEach(section => section.classList.remove('active'));
+                const subTargetId = buttonElement.getAttribute('data-subtarget');
+                const subTargetSection = parentSection.querySelector('#' + subTargetId);
+                if (subTargetSection) {
+                    subTargetSection.classList.add('active');
+                }
+            }
+
+            // 为所有子导航按钮添加事件监听器
+            const allSubNavButtons = document.querySelectorAll('.sub-nav button');
+            allSubNavButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const parentSection = this.closest('.content-section');
+                    activateSubNav(this, parentSection);
+                });
+            });
+
+            // 默认显示第一个主标签页及其第一个子标签页的内容
+            if (navButtons.length > 0) {
+                navButtons[0].click(); // 模拟点击第一个主导航按钮以触发其逻辑
+            } else if (contentSections.length > 0) { // 如果没有导航按钮，但有内容区
+                contentSections[0].classList.add('active');
+                 const firstSubNavButton = contentSections[0].querySelector('.sub-nav button');
+                 if (firstSubNavButton) {
+                    activateSubNav(firstSubNavButton, contentSections[0]);
+                 }
+            }
+
+            // 示例：如何使用 Chart.js (您需要先引入 Chart.js 库)
+            // 这是一个非常基础的示例，您需要根据您的数据进行配置
+            /*
+            const ctx = document.getElementById('economyChart');
+            if (ctx) {
+                // 确保 Chart.js 库已加载
+                if (typeof Chart !== 'undefined') {
+                    new Chart(ctx.getContext('2d'), {
+                        type: 'bar', // 图表类型：柱状图
+                        data: {
+                            labels: ['2020', '2021', '2022', '2023', '2024 (预计)'], // X轴标签
+                            datasets: [{
+                                label: 'GDP增长 (亿元)', // 数据集标签
+                                data: [80, 85, 92, 100, 108], // Y轴数据 (请替换为真实数据)
+                                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.warn('Chart.js 未加载，无法渲染图表。');
+                    const placeholder = ctx.parentElement.querySelector('.chart-placeholder');
+                    if(placeholder) placeholder.textContent = 'Chart.js 未加载，图表无法显示。请在HTML中引入Chart.js库。';
+                }
+            }
+            */
+            // 如果您想使用 Chart.js，请取消上面代码块的注释，并在 <head> 中添加 Chart.js 的 CDN 链接，例如：
+            // <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            // 或者下载后本地引入。
+        });
+    </script>
+</body>
+</html>

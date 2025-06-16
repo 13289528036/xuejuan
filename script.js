@@ -278,3 +278,41 @@ fetch('data.json')
 
     })
     .catch(error => console.error('Error loading the data.json file:', error));
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const teaCards = document.querySelectorAll('.tea-card');
+    
+        // 示例茶叶数据 (后续可以从JSON文件或API加载)
+        const teaDataStore = {
+            biluochun: {
+                name: "江苏碧螺春",
+                image: "images/tea_images/biluochun.jpg", // 假设图片在 images/tea_images/ 目录下
+                fullDescription: "碧螺春是中国传统名茶，以其螺旋形状和清香著称。产于江苏太湖周边，历史悠久，品质优异。",
+                // 可以添加更多属性，如历史、产地、冲泡方法等
+            },
+            longjing: {
+                name: "西湖龙井",
+                image: "images/tea_images/longjing.jpg",
+                fullDescription: "西湖龙井，产于浙江杭州西湖一带，是中国十大名茶之一。其色绿、香郁、味甘、形美，四绝著称于世。"
+            },
+            // 为其他茶叶添加类似的数据...
+        };
+    
+        teaCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const teaKey = card.getAttribute('data-tea'); // 从data-tea属性获取茶叶的键
+                const teaInfo = teaDataStore[teaKey];
+    
+                if (teaInfo) {
+                    showTeaDetailModal(teaInfo);
+                } else {
+                    // 如果没有找到茶叶信息，可以显示一个默认信息或跳转到茶叶列表页
+                    alert(`抱歉，暂无 ${card.querySelector('h3').textContent} 的详细信息。`);
+                }
+            });
+        });
+    });
+
+    function showTeaDetailModal(teaData) {
+        // ... (模态框函数保持不变)
+    }

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link data-cms-original-href="/vendor/bootstrap/bootstrap.min.css"
+        href="/vendor/bootstrap/bootstrap.min.css?_cchid=bb84936d7c7700b31719a49340a42bd8" rel="stylesheet">
+    <link data-cms-original-href="/vendor/phosphor-icons/css/phosphor.css"
+        href="/vendor/phosphor-icons/css/phosphor.css?_cchid=51f1fd00a20bbf9b3332bf357c302b84" rel="stylesheet">
+    <link data-cms-original-href="/vendor/magnific-popup/magnific-popup.css"
+        href="/vendor/magnific-popup/magnific-popup.css?_cchid=afd710ae6d2e177c866d855e782863fa" rel="stylesheet">
+    <link data-cms-original-href="/images/favicon.ico"
+        href="/images/favicon.ico?_cchid=0a7ae52e01153ccf9e66ba8454ecd12c" rel="shortcut icon" type="image/x-icon">
+    <link data-cms-original-href="/images/favicon.png"
+        href="/images/favicon.png?_cchid=cfc633d8cf60c505dbbc100e6937d658" rel="icon" type="image/x-icon">
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon">
+    <link data-cms-original-href="/favicon.svg" href="/favicon.svg?_cchid=b26268c577ff7e2f417e988489eebe41" rel="icon"
+        type="image/svg+xml">
+    <link href="/touch-icon.png" rel="icon" sizes="192x192" type="image/png">
+    <link data-cms-original-href="/images/favicon.png"
+        href="/images/favicon.png?_cchid=cfc633d8cf60c505dbbc100e6937d658" rel="icon" type="image/png">
+    <meta content="Astro v2.4.5" name="generator">
+
+    <title>Resources for makers to learn, sell &amp; grow | Sendit</title>
+
+    <link href="https://top-quail.cloudvent.net/blog/" rel="canonical">
+
+    <meta
+        content="We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy."
+        name="description">
+
+    <meta content="index, follow" name="robots">
+
+    <meta content="Resources for makers to learn, sell &amp; grow" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="/images/feature/feature-hero.png" property="og:image">
+    <meta content="https://top-quail.cloudvent.net/" property="og:url">
+
+    <meta
+        content="We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy."
+        property="og:description">
+
+
+
+
+
+    <meta content="/images/feature/feature-hero.png" property="og:image:url">
+
+
+
+    <meta property="og:image:height">
+    <meta content="/images/feature/feature-hero.png" property="og:image:alt">
+
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="@twitter_site" name="twitter:site">
+    <meta content="@twitter_site" name="twitter:creator">
+
+    <link data-cms-original-href="/_astro/404.a9a0c8ca.css"
+        href="/_astro/404.a9a0c8ca.css?_cchid=b7882d209199392bf4d9f16734d2fa46" rel="stylesheet">
+</head>
+
+<body>
+    <!--databinding:#-->
+    <style>
+        astro-island,
+        astro-slot {
+            display: contents
+        }
+    </style>
+    <script>(self.Astro = self.Astro || {}).load = a => { (async () => await (await a())())() }, window.dispatchEvent(new Event("astro:load")); var l; { const c = { 0: t => t, 1: t => JSON.parse(t, o), 2: t => new RegExp(t), 3: t => new Date(t), 4: t => new Map(JSON.parse(t, o)), 5: t => new Set(JSON.parse(t, o)), 6: t => BigInt(t), 7: t => new URL(t), 8: t => new Uint8Array(JSON.parse(t)), 9: t => new Uint16Array(JSON.parse(t)), 10: t => new Uint32Array(JSON.parse(t)) }, o = (t, s) => { if (t === "" || !Array.isArray(s)) return s; const [e, n] = s; return e in c ? c[e](n) : void 0 }; customElements.get("astro-island") || customElements.define("astro-island", (l = class extends HTMLElement { constructor() { super(...arguments); this.hydrate = () => { if (!this.hydrator || this.parentElement && this.parentElement.closest("astro-island[ssr]")) return; const s = this.querySelectorAll("astro-slot"), e = {}, n = this.querySelectorAll("template[data-astro-template]"); for (const r of n) { const i = r.closest(this.tagName); !i || !i.isSameNode(this) || (e[r.getAttribute("data-astro-template") || "default"] = r.innerHTML, r.remove()) } for (const r of s) { const i = r.closest(this.tagName); !i || !i.isSameNode(this) || (e[r.getAttribute("name") || "default"] = r.innerHTML) } const a = this.hasAttribute("props") ? JSON.parse(this.getAttribute("props"), o) : {}; this.hydrator(this)(this.Component, a, e, { client: this.getAttribute("client") }), this.removeAttribute("ssr"), window.removeEventListener("astro:hydrate", this.hydrate), window.dispatchEvent(new CustomEvent("astro:hydrate")) } } connectedCallback() { !this.hasAttribute("await-children") || this.firstChild ? this.childrenConnectedCallback() : new MutationObserver((s, e) => { e.disconnect(), this.childrenConnectedCallback() }).observe(this, { childList: !0 }) } async childrenConnectedCallback() { window.addEventListener("astro:hydrate", this.hydrate); let s = this.getAttribute("before-hydration-url"); s && await import(s), this.start() } start() { const s = JSON.parse(this.getAttribute("opts")), e = this.getAttribute("client"); if (Astro[e] === void 0) { window.addEventListener(`astro:${e}`, () => this.start(), { once: !0 }); return } Astro[e](async () => { const n = this.getAttribute("renderer-url"), [a, { default: r }] = await Promise.all([import(this.getAttribute("component-url")), n ? import(n) : () => () => { }]), i = this.getAttribute("component-export") || "default"; if (!i.includes(".")) this.Component = a[i]; else { this.Component = a; for (const d of i.split(".")) this.Component = this.Component[d] } return this.hydrator = r, this.hydrate }, s, this) } attributeChangedCallback() { this.hydrator && this.hydrate() } }, l.observedAttributes = ["props"], l)) }</script>
+    <astro-island await-children="" client="load" component-export="default"
+        component-url="/_astro/navigation.33192746.js"
+        opts="{&quot;name&quot;:&quot;Navigation&quot;,&quot;value&quot;:true}" prefix="r2"
+        props="{&quot;__data_binding_path&quot;:[0,true],&quot;pageUrl&quot;:[7,&quot;https://top-quail.cloudvent.net/blog/&quot;]}"
+        renderer-url="/_astro/client.5dccb351.js" ssr="" uid="1LooAO">
+        <header>
+            <nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id="mainnavigationBar">
+                <div class="container-fluid"><a class="navbar-brand" href="/"><img alt="Nav-Logo"
+                            data-cms-original-src="/images/logo.svg"
+                            src="/images/logo.svg?_cchid=4a5c93e836c52c98b75c5a29bd2983d0"></a><button
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                        type="button"><span class="navbar-toggler-default"><svg fill="none" height="24"
+                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <line stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    x1="3.5" x2="21.5" y1="5.5" y2="5.5"></line>
+                                <line stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    x1="4.5" x2="21.5" y1="12.5" y2="12.5"></line>
+                                <line stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    x1="11.5" x2="21.5" y1="19.5" y2="19.5"></line>
+                            </svg></span><span class="navbar-toggler-toggled"><svg fill="none" height="20"
+                                viewBox="0 0 28 28" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.5 6.5L6.5 21.5" stroke="#404152" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="3"></path>
+                                <path d="M21.5 21.5L6.5 6.5" stroke="#404152" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="3"></path>
+                            </svg></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-20 mb-lg-0">
+                            <li class="nav-item "><a class="nav-link " href="/">Home</a></li>
+                            <li class="nav-item "><a class="nav-link " href="/features/">Features</a></li>
+                            <li class="nav-item "><a class="nav-link " href="/pricing/">Pricing</a></li>
+                            <li class="nav-item "><a class="nav-link " href="/about/">About</a></li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-link active"
+                                    href="/blog/">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/blog">All Articles</a></li>
+                                    <li><a class="dropdown-item" href="/tags/marketing/">Marketing</a></li>
+                                    <li><a class="dropdown-item" href="/tags/technology/">Technology</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item "><a class="nav-link " href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <div class="nav-item"><a class="btn btn-sm btn-links" href="/signup/">Get Started</a></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </astro-island><!--databindingend:#-->
+
+    <section class="blog-hero pt-xl-22 pt-sm-20 pt-18 pb-xxl-25 pb-xl-23 pb-22 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-10 mx-auto">
+                    <div class="blog-hero-content">
+                        <h1 class="blog-hero-title">Resources for makers to learn, sell &amp; grow</h1>
+                        <div>
+                            <p>We believe that a good email marketing strategy is the key to growth. So we’re helping
+                                you grow your business with tools and resources that make email marketing easy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog @@padding @@blog-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-post">
+                        <div class="blog-post-thumb"><a href="/blog/5-things-to-improve-your-email-templates"><img
+                                    alt="People working on laptops and looking at charts"
+                                    data-cms-original-src="/images/blog/blog-thumb-6.jpg" loading="lazy"
+                                    src="/images/blog/blog-thumb-6.jpg?_cchid=3fcf0a3d4bdd91b4dccbc843c05716a5"></a>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-tag"><a href="/tags/marketing">Marketing</a><a
+                                    href="/tags/blog">Blog</a></div>
+                            <div class="blog-post-title"><a href="/blog/5-things-to-improve-your-email-templates">5
+                                    things to improve your email templates</a></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-post">
+                        <div class="blog-post-thumb"><a href="/blog/7-things-you-didnt-know-about-email"><img
+                                    alt="Group of people discussing something shwon on a laptop"
+                                    data-cms-original-src="/images/blog/blog-thumb-5.jpg" loading="lazy"
+                                    src="/images/blog/blog-thumb-5.jpg?_cchid=8ee1c33c5db08083b770debde6d63a95"></a>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-tag"><a href="/tags/marketing">Marketing</a><a
+                                    href="/tags/blog">Blog</a></div>
+                            <div class="blog-post-title"><a href="/blog/7-things-you-didnt-know-about-email">7 things
+                                    you didn't know about email</a></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-post">
+                        <div class="blog-post-thumb"><a href="/blog/best-email-sending-services"><img
+                                    alt="Staff meeting" data-cms-original-src="/images/blog/blog-thumb-3.jpg"
+                                    loading="lazy"
+                                    src="/images/blog/blog-thumb-3.jpg?_cchid=5074bd66b079b58546af6d840ffeed44"></a>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-tag"><a href="/tags/technology">Technology</a><a
+                                    href="/tags/blog">Blog</a></div>
+                            <div class="blog-post-title"><a href="/blog/best-email-sending-services">Best email sending
+                                    services</a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="blog-pagination">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link btn btn-secondary active" href="/blog">1</a></li>
+            <li class="page-item"><a class="page-link btn btn-secondary " href="/blog/2">2</a></li>
+            <li class="page-item"><a class="page-link btn btn-secondary" href="/blog/2"><svg height="11.314"
+                        viewBox="0 0 20.657 11.314" width="20.657" xmlns="http://www.w3.org/2000/svg">
+                        <g data-name="Group 12" fill="#fff">
+                            <path d="M0 4.657h18v2H0z" data-name="Rectangle 2400"></path>
+                            <path d="M13.586 9.9l5.6568542-5.6568542 1.4142136 1.4142135-5.6568542 5.6568543z"
+                                data-name="Rectangle 2401"></path>
+                            <path d="M15 0l5.6568542 5.6568542-1.4142135 1.4142136-5.6568543-5.6568542z"
+                                data-name="Rectangle 2402"></path>
+                        </g>
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+    <footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id="footer">
+        <div class="container-fluid">
+            <div class="footer-wrapper">
+                <div class="row">
+                    <div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+                        <div class="footer-logo mt-7 mt-md-0"><a class="" href="/"><img alt="logo"
+                                    data-cms-original-src="/images/footer-logo.svg"
+                                    src="/images/footer-logo.svg?_cchid=eb91d2b2b06a32e2ccd95bb41634e83a"></a>
+                            <p>© Copyright <span>2024</span> <!-- -->MyCompany. All rights reserved.</p>
+                        </div>
+                        <div class="social-icon">
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.facebook.com/mycompany"><i aria-hidden="true"><span
+                                                class="visually-hidden"></span></i></a></li>
+                                <li><a href="https://www.instagram.com/mycompany"><i aria-hidden="true"><span
+                                                class="visually-hidden"></span></i></a></li>
+                                <li><a href="https://www.twitter.com/mycompany"><i aria-hidden="true"><span
+                                                class="visually-hidden"></span></i></a></li>
+                                <li><a href="https://www.github.com/mycompany"><i aria-hidden="true"><span
+                                                class="visually-hidden"></span></i></a></li>
+                                <li><a href="https://www.youtube.com/mycompany"><i aria-hidden="true"><span
+                                                class="visually-hidden"></span></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-1">
+                        <div class="footer-widget">
+                            <h3 class="">Main Pages</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/features/">Features</a></li>
+                                <li><a href="/pricing/">Price</a></li>
+                                <li><a href="/about/">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-1">
+                        <div class="footer-widget">
+                            <h3 class="">Community</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/feed.xml">RSS Feed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-1">
+                        <div class="footer-widget">
+                            <h3 class="">Company</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="/contact/">Contact</a></li>
+                                <li><a href="/privacy/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cms-original-src="/vendor/jQuery/jquery.min.js"
+        src="/vendor/jQuery/jquery.min.js?_cchid=e72d21310a37cdb16b583e8c1da0098f"></script>
+    <script data-cms-original-src="/vendor/bootstrap/bootstrap.bundle.min.js"
+        src="/vendor/bootstrap/bootstrap.bundle.min.js?_cchid=060c004ad255a129dd2db5a33957c21c"></script>
+    <script data-cms-original-src="/vendor/counter-up/countup.js"
+        src="/vendor/counter-up/countup.js?_cchid=ce9812cdce1b3c40ccf38c9efccbd70a"></script>
+    <script data-cms-original-src="/vendor/magnific-popup/magnific-popup.min.js"
+        src="/vendor/magnific-popup/magnific-popup.min.js?_cchid=ba6cf724c8bb1cf5b084e79ff230626e"></script>
+    <script async="" data-cms-original-src="/js/script.js"
+        src="/js/script.js?_cchid=3b875b1b3bb9d45c4e21f3726770ac4c"></script>
