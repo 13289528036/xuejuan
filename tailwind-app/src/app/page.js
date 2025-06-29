@@ -40,33 +40,45 @@ import exercises from "@/data/exercises.json"; // 从 JSON 文件导入练习数
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-100"> {/* Slightly lighter background for better contrast */}
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <header className="text-center mb-16 py-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl"> {/* Added gradient, padding, rounded corners and shadow */}
-          <h1 className="text-5xl font-extrabold text-white mb-4"> {/* Larger, bolder, white text */}
-            欢迎来到雪娟的页面
-          </h1>
-          <p className="text-xl text-purple-100"> {/* Adjusted text color and size */}
-            在这里探索我的Web前端学习之旅和项目练习。
-          </p>
-        </header>
+    <div className="flex h-screen bg-slate-100">
+      {/* Main Content with Navigation */}
+      <div className="flex-1 flex flex-col overflow-y-auto">
+        <Navbar />
+        <main className="flex-grow container mx-auto px-4 py-8">
+          <header className="text-center mb-16 py-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl">
+            <h1 className="text-5xl font-extrabold text-white mb-4">
+              欢迎来到雪娟的页面
+            </h1>
+            <p className="text-xl text-purple-100">
+              在这里探索我的Web前端学习之旅和项目练习。
+            </p>
+          </header>
 
-        {/* 练习卡片网格 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {exercises.map((exercise) => (
-            <ExerciseCard
-              key={exercise.id}
-              title={exercise.title}
-              description={exercise.description}
-              imageUrl={exercise.imageUrl}
-              link={exercise.link}
-              tags={exercise.tags}
-            />
-          ))}
-        </div>
-      </main>
-      {/* Footer 组件将在 layout.js 中添加 */}
+          {/* 练习卡片网格 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {exercises.map((exercise) => (
+              <ExerciseCard
+                key={exercise.id}
+                title={exercise.title}
+                description={exercise.description}
+                imageUrl={exercise.imageUrl}
+                link={exercise.link}
+                tags={exercise.tags}
+              />
+            ))}
+          </div>
+        </main>
+        {/* Footer can be added here or in a layout file */}
+      </div>
+
+      {/* Embedded Chat Iframe */}
+      <div className="w-1/3 bg-white shadow-lg h-full flex-shrink-0">
+        <iframe
+          src="https://ai.youdao.com/saas/qanything/#/bots/94D669760C284671/share"
+          className="w-full h-full border-none"
+          title="QAnything Chatbot"
+        ></iframe>
+      </div>
     </div>
   );
 }
