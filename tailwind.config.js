@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       // 您可能已经有其他的 extend 配置，请在此基础上添加
       animation: {
-        'gradient-flow': 'gradient-flow 15s ease infinite', // 定义名为 gradient-flow 的动画
+        'gradient-flow': 'gradient-flow 30s ease infinite', // 定义名为 gradient-flow 的动画
       },
       keyframes: {
         'gradient-flow': {

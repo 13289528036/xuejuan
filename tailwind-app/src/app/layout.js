@@ -1,23 +1,14 @@
-import "./globals.css";
-import Footer from "@/components/Footer"; // 导入 Footer 组件
+import './globals.css'
 
 export const metadata = {
-  title: "Web前端开发练习平台", // 更新标题
-  description: "《Web前端开发》课程练习成果展示", // 更新描述
-};
+  title: '开心消消乐 - 高端豪华版',
+  description: '一款高端大气上档次的开心消消乐游戏',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="lang"> {/* 推荐使用中文 lang */}
-      <head>
-
-      </head>
-      <body
-        className={` antialiased bg-slate-50 flex flex-col min-h-screen`}
-      >
-        <div className="flex-grow">{children}</div>
-        <Footer /> {/* 添加 Footer 组件 */}
-      </body>
+    <html lang="zh">
+      <body>{children}</body>
     </html>
-  );
+  )
 }

@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Tailwind CSS App
 
-## Getting Started
+这是一个使用 [Next.js](https://nextjs.org) 框架并集成 [Tailwind CSS](https://tailwindcss.com) 的项目，通过 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) 初始化。
 
-First, run the development server:
+## 项目介绍
+
+本项目旨在展示 Next.js 和 Tailwind CSS 的基本集成与使用。它包含了一个基础的 Next.js 应用结构，并配置了 Tailwind CSS，以便您可以快速开始开发具有现代 UI 的 Web 应用。
+
+## 快速开始
+
+请按照以下步骤在您的本地机器上运行开发服务器：
+
+1.  **安装依赖**
+    首先，进入项目目录并安装所有必要的依赖：
+    ```bash
+    npm install
+    # 或者
+    yarn install
+    ```
+
+2.  **运行开发服务器**
+    安装完成后，您可以启动开发服务器：
+    ```bash
+    npm run dev
+    # 或者
+    yarn dev
+    ```
+
+    您的应用程序将在 `http://localhost:3000` 上运行。
+
+3.  **在浏览器中打开**
+    在浏览器中访问 `http://localhost:3000` 查看结果。
+
+    您可以通过修改 `src/app/page.js` 文件来开始编辑页面。当您保存文件时，页面会自动更新。
+
+## 构建和部署
+
+要将您的 Next.js 应用程序构建为生产环境版本，请运行：
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+# 或者
+yarn build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
